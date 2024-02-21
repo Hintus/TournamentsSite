@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static', path='css/styles.css') }}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Base</title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="header">
+        <a class="logo" href="{{url_for('main')}}">
+            ЗДЕСЬ БУДЕТ
+            <p class="logo_text">
+                ЛОГО
+            </p>
+        </a>
+        <a class="header_text" href="#start_main">С чего начать?</a>
+        <a class="header_text" href="{{ url_for('schemas') }}">Создать турнир</a>
+        <a class="header_text" href="{{ url_for('tournaments') }}">Турниры</a>
+        <a class="header_text" href="{{ url_for('teams') }}">Команды</a>
+        <a class="header_text" href="{{ url_for('users') }}">Игроки</a>
+            <a class="login" href="{{ url_for('login') }}">
+                <p class="login_text">Войти</p>
+                <div class="arrow">
+                    <div class="arrow_start"></div>
+                    <div class="arrow_end"></div>
+                </div>
+            </a>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>

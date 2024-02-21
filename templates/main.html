@@ -1,0 +1,52 @@
+{% extends 'header.html' %}
+{% block head %}
+{%  endblock %}
+{% block body %}
+    <div class="main">
+        <img class="big_img" src="{{ url_for('static', path='images/стрей_смотрит.png') }}">
+        <div class="big_text_header">
+            <p>Just a game</p>
+            <div class="stroke"></div>
+        </div>
+        <div class="big_text">Цифровая платформа для <span class="orange_text">легкой организации</span> киберспортивных <span class="orange_text">турниров.</span></div>
+    </div>
+    <div class="swap">
+        <div class="swap_block swap_black"> 
+            <p class="swap_black_text">
+                Поддеживаемые дисциплины:
+            </p>
+        </div>
+        <div class="swap_block swap_grey">
+            <p class="swap_grey_header">Dota 2</p>
+            <p class="swap_grey_text">Командные лиги,<br> дуэли 1 на 1</p>
+        </div>
+        <div class="swap_block swap_grey">
+            <p class="swap_grey_header">CS 2</p>
+            <p class="swap_grey_text">Серьёзные турниры, <br>практисы</p></div>
+        <div class="swap_block swap_grey">
+            <p class="swap_grey_header">Hearthstone</p>
+            <p class="swap_grey_text">Battlegrounds, <br> классический режим</p></div>
+        <div class="swap_block"><p class="orange_text swap_right_text">И многие <br>другие</p></div>
+    </div>
+    <a name = 'start_main'></a>
+    <div class="start_main">
+        <p class="start_text_header">С чего начать?</p>
+        <p class="start_text">Всего 3 простых шага, чтобы начать пользоваться современной и удобной платформой и сделать ваши спортивные мероприятия максимально привлекательными для всех участников.
+        </p>
+        <div class="numbers">
+            <div class="number_start"> <span class="orange_text number_gradient">1.</span>
+                <p class="number_futter"> Зарегистрирвоаться или продолжить анонимно.</p></div>
+            <div class="number_start"><span class="orange_text number_gradient">2.</span>
+                <p class="number_futter">Смоделировать турнирную сетку, назначить администрацию и создать турнир.</p></div>
+            <div class="number_start"><span class="orange_text number_gradient">3.</span>
+                <p class="number_futter">Разослать приглашения игрокам. Запустить турнир и начать модерацию.</p></div>
+        </div>
+        <a class="login reg_button" href="{{ url_for('register') }}">
+            <p class="login_text">Зарегистрироваться</p>
+            <div class="arrow">
+                <div class="arrow_start arrow_reg"></div>
+                <div class="arrow_end arrow_end_reg"></div>
+            </div>
+        </a>
+    </div>
+{% endblock %}

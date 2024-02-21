@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', path='css/styles.css') }}" rel="stylesheet">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <a class="login back_button" href="{{ url_for('main') }}">
+        <div class="arrow arrow_back">
+            <div class="arrow_start arrow_start_back"></div>
+            <div class="arrow_end arrow_end_back"></div>
+        </div>
+    </a>
+    <div class="log_form">
+        {% block form %}
+        {% endblock %}
+    </div>
+</body>
+</html>

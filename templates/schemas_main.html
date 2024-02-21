@@ -1,0 +1,41 @@
+{% extends 'header.html' %}
+{% block head %}
+{%  endblock %}
+{% block body %}
+<div class="schemas">
+    <div class="schema_proto">
+        <p class="schema_header">Сетка <span class="orange_text"> "Play-Off" </span></p>
+        <a class="schema_main">
+            <ul>
+                <li class="schema_main_text"> Подходит для ораганизации простых турниров на выбывание</li>
+                <li class="schema_main_text">Проста в понимании для всех</li>
+                <li class="schema_main_text">Повышает зрелищность игр</li>
+            </ul>
+            <img class="Play_Off_img" src="{{url_for('static',path='images/PlayOff.drawio.png')}}" alt="">
+        </a>
+    </div>
+    <div class="schema_proto">
+        <p class="schema_header">Сетка <span class="orange_text">  "Группы" </span></p>
+        <a class="schema_main">
+            <ul>
+                <li class="schema_main_text"> Отлично подойдёт для первой стадии большого турнира</li>
+                <li class="schema_main_text">Самое удобное решение для турниров с большим ков-вом команд</li>
+                <li class="schema_main_text">Самая распространённая система</li>
+            </ul>
+            <img class="Groups_img" src="{{url_for('static',path='images/Группы_схема.png')}}" alt="">
+        </a>
+    </div>
+    <div class="schema_proto">
+        <p class="schema_header schema_header_every">Сетка <span class="orange_text"> "Каждый с каждым" </span></p>
+        <a class="schema_main">
+            <ul>
+                <li class="schema_main_text"> Подходит для ораганизации небольших турниров</li>
+                <li class="schema_main_text">Отлично подойдёт на соревнований 1 на 1</li>
+                <li class="schema_main_text">Простая и наглядна модель</li>
+            </ul>
+            <img class="all_with_all_img" src="{{url_for('static',path='images/all_with_all.png')}}" alt="">
+        </a>
+    </div>
+</div>
+    
+{% endblock %}

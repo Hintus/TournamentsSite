@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@100&display=swap');
+
+body{
+background-color: #111;
+padding: 0px;
+padding-top: 100px;
+padding-left: 3%;
+margin: 0px;
+overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:root{
+    --hover_orange: #702601;
+    --my_orange: #ff5500;
+    --my_border: 1px solid #303030;
+}
+
+/* это фон самого скроллбара. */
+::-webkit-scrollbar {
+    background-color: #1a1a1a;
+    width: 5px;
+}
+
+/* кнопки направления на полосе прокрутки. */
+/* ::-webkit-scrollbar-button {
+
+} */
+
+/* пустое пространство под индикатором прокрутки. */
+::-webkit-scrollbar-track {
+
+}
+
+/* индикатор прокрутки, перетаскиваемый элемент. */
+::-webkit-scrollbar-thumb {
+    background-color: #ff5500;
+    border-radius: 10px;
+}
+
+
+.header{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-items: flex-end;
+    margin: 0px;
+    background-color: #111;
+    border-bottom: 1px solid rgb(48, 48, 48);
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+.logo{
+    font-size: 18px;
+    color: white;
+    left: 5%;
+    width: 130px;
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    margin-left: 10%;
+    margin-right: 23%;
+}
+
+.logo_text{
+    margin: 0px;
+    font-size: 20px;
+    color: rgb(255, 85, 0);
+    font-family: 'Inter', sans-serif;
+}
+
+.login{
+    top: 33px;
+    right: 30%;
+    border: 1.5px solid var(--my_orange);
+    width: 160px;
+    height: 30px;
+    border-radius: 17.5px;
+    cursor: pointer;
+    background-color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.login:hover{
+    background-color: #702601;
+}
+
+.login_text{
+    color: white;
+    text-decoration: none;
+    top: -11px;
+    left: 12px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.arrow{
+    width: 130;
+    top: -37px;
+    right: -70px;
+    position: relative;
+}
+
+.arrow_start{
+    background-color: rgb(123, 123, 123);
+    width: 80px;
+    height: 2px;
+}
+
+.arrow_end{
+    background-color: inherit;
+    width: 10px;
+    height: 10px;
+    border: 2px solid  rgb(123, 123, 123);
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    left: 68.2px;
+    top: -7px;
+    position: relative;
+}
+
+.header_text{
+    margin: 20px;
+    margin-right: 15px;
+    font-size: 13px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.header_text:hover{
+    color: var(--my_orange);
+}
+
+.main{
+    display: block;
+    flex-grow: 1;
+}
+
+.big_text_header{
+    margin-top: 80px;
+    color: rgb(176, 176, 176);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.stroke{
+    width: 280px;
+    border-bottom: 1px solid rgb(176, 176, 176);
+    margin-top: -25px;
+    margin-left: 100px;
+}
+
+.big_text{
+    margin-top: 20px;
+    width: 400px;
+    font-size: 37px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+}
+
+.orange_text{
+    margin: 0px;
+    color: var(--my_orange);
+    font-family: 'Inter', sans-serif;
+}
+
+.big_img{
+    width: 400px;
+    height: 400px;
+    right: 20%;
+    position: absolute;
+    z-index: -1;
+}
+
+.swap{
+    margin-top: 100px;
+    margin-left: -3%;
+    margin-bottom: 100px;
+    width: 103%;
+    height: 120px;
+    border-bottom: var(--my_border);
+    display: flex;
+    padding-left: 4%;
+}
+
+.swap_block{
+    width: 250px;
+    height: 120px;
+    border: var(--my_border);
+    padding: none;
+    z-index: -1;
+}
+
+.swap_black{
+    background-color: black;
+}
+
+.swap_black_text{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight:bolder;
+    font-size: 20px;
+    margin: 0%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.swap_grey{
+    backdrop-filter: blur(10px);
+    padding: none;
+}
+
+.swap_grey_header{
+    color: var(--my_orange);
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.swap_grey_text{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.swap_right_text{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.start_main{
+    height: 500px;
+}
+
+.start_text_header{
+    margin: 0%;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.start_text{
+    margin: 0%;
+    width: 50%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.reg_text{
+    color: white;    
+    font-family: 'Inter', sans-serif;
+}
+
+.reg_button{
+    width: 240px;
+}
+
+.arrow_reg{
+    width: 35px;
+    margin-left: 120px;
+}
+
+.arrow_end_reg{
+    margin-left: 75px;
+}
+
+.numbers{
+    display: flex;
+    margin-left: 50px;
+}
+
+.number_start{
+    width: 280px;
+    font-size: 200px;  
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-right: 120px;
+}
+
+.number_gradient{
+    background-color: #2AA5A0;
+    background-image: linear-gradient(0deg, white ,var(--my_orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 45px;
+}
+
+.number_futter{
+    color: var(--my_orange);
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.back_button{
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.arrow_back{
+    width: 30px;
+    top: 13px;
+    left: 0px;
+}
+
+.arrow_start_back{
+    width: 22px;
+    margin-left: 5px;;
+}
+
+.arrow_end_back{
+    left: 5px;
+    transform: rotate(-135deg);
+}
+
+.log_form{
+    position: absolute;
+    border: 1px solid var(--my_orange);
+    width: 250px;
+    border-radius: 20px;
+    padding: 15px;
+    padding-right: 40px;
+    left: 38%;
+}
+
+.schemas{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.schema_proto{
+    width: 300px;
+    height: 300px;
+    margin-right: 135px
+}
+
+.schema_header{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    margin-left: 45px;
+    width: 400px;
+}
+
+.schema_header_every{
+    margin-left: -10px;
+}
+
+.schema_main{
+    display: block;
+    padding: 15px;
+    padding-left: 0px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid var(--my_orange);
+    cursor: pointer;
+}
+
+.schema_main:hover{
+    background-color: #702601;
+}
+
+.schema_main_text{
+    margin: 0px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.Play_Off_img{
+    margin-top: 30px;
+    margin-left: 25px;
+    width: 250px;
+    height: 150px;
+}
+
+.Groups_img{
+    margin-top: 30px;
+    margin-left: 25px;
+    width: 88%;
+}
+
+.all_with_all_img{
+    margin-left: 70px;
+    width: 150px;
+}
+
+.login_header{
+    font-size: 23px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-left: 35px;
+}
+
+.login_input_text{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    width: 350px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login_input_login{
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid var(--my_orange);
+    color: white;
+    outline: none;
+}
+
+.login_input_register{
+    width: 151px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid var(--my_orange);
+    color: white;
+    outline: none;
+}
+
+.reg_input_repeat{
+    width: 99px;
+}
+
+.input_submit{
+    border: #ff5500 1px solid;
+    border-radius: 10px;
+    background-color: inherit;
+    color: white;
+    font-size: 18px;    
+    font-family: 'Inter', sans-serif;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+.input_submit:hover{
+    background-color: var(--hover_orange);
+}
+
+.reg_supmit{
+    margin-left: 82px;
+}
+
+.reg_help_text{
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    width:300px;
+    font-size: 12px;
+    margin-left: -10px;
+}
+
+.classes_table_title{
+    background-color: #2AA5A0;
+    background-image: linear-gradient(0deg, white ,var(--my_orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-top: 1%;
+    margin-left: 41%;
+}
+
+.classes_main_table{
+    padding: 3px;
+    z-index: -1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 16%;
+    margin-top: 3%;
+    border: 2px solid var(--my_orange);
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    background-color: #230c00;
+}
+
+.classes_main_table::-webkit-scrollbar {
+    background-color: inherit;
+    width: 2px;
+}
+
+/* индикатор прокрутки, перетаскиваемый элемент. */
+.classes_main_table::-webkit-scrollbar-thumb {
+    background-color: var(--my_orange);
+    border-radius: 20px;
+}
+
+.table_stroke{
+    width: 100%;
+    height: 50px;
+    background-color: #111;
+    border: 1px solid var(--my_orange);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+/* .table_stroke:hover{
+    background-color: var(--hover_orange);
+} */

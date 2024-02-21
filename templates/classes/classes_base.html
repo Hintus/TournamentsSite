@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+{% block head %}
+    <script src="{{ url_for('static', path='js/table_stroke_animation.js') }}" defer></script>
+    {% block head2 %}
+
+    {% endblock %}
+{% endblock %}
+
+{% block body %}
+
+<div class="classes_table_title">
+    {% block table_title %}
+    {% endblock %}
+</div>
+
+<div class="classes_main_table">
+    {% block table %}
+
+    {% endblock %}
+</div>
+{% endblock %}

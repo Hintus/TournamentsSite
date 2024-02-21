@@ -1,0 +1,23 @@
+{% extends 'log_base.html' %}
+
+{% block head %}
+<title>Регистрация</title>
+{% endblock %}
+
+
+{% block form %}
+<div class="login_header"> Зарегистрируйтесь </div>
+<form method="post" action="/auth/register">
+    <div class="login_input_text"> Ваш <span class="orange_text">логин:</span>
+        <input class="login_input_login" type="text" name="username">
+    </div>
+    <div class="login_input_text"> Ваш <span class="orange_text">пароль:</span>
+        <input class="login_input_register" type="password" name="password">
+    </div>
+    <div class="login_input_text"> Повторите <span class="orange_text">пароль:</span>
+        <input class="login_input_register reg_input_repeat" type="password" name="password">
+    </div>
+    <p class="reg_help_text">Если у вас уже есть аккаунт вы можете в него <a class="reg_help_href" href="{{ url_for('login') }}">Войти</a></p>
+    <input class="input_submit reg_supmit" type="submit" value="Завершить">
+</form>
+{% endblock %}
