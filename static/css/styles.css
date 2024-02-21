@@ -498,7 +498,6 @@ a{
     overflow-x: hidden;
     margin-left: 16%;
     margin-top: 3%;
-    border: 2px solid var(--my_orange);
     width: 800px;
     height: 500px;
     border-radius: 10px;
@@ -534,3 +533,72 @@ a{
 /* .table_stroke:hover{
     background-color: var(--hover_orange);
 } */
+
+.all_vs_all_header{
+    background-color: #2AA5A0;
+    background-image: linear-gradient(0deg, white ,var(--my_orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+
+.tournaments_schema{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid #ff5500;
+}
+
+.slider {
+    opacity: 0.1;
+    -webkit-appearance: none;
+    width: 30%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #292929;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #702601;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.cells_holder{
+    width: 200px;
+    height: 200px;
+    flex-direction: row;
+    white-space: normal;
+}
+
+.cells{
+    display:inline-block;
+    border: 1px solid #ff5500;
+    width: 25px;
+    height: 25px;
+    margin-top: -5px;
+}
+
+.cells_blocked{
+    display:inline-block;
+    border: 1px solid #792800;
+    width: 25px;
+    height: 25px;
+    margin-top: -5px;
+}

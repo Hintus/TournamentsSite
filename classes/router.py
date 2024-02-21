@@ -23,3 +23,8 @@ async def teams(request: Request):
 @router.get('/tournaments', response_class=HTMLResponse)
 async def tournaments(request: Request):
     return templates.TemplateResponse(request=request, name='classes/tournaments.html')
+
+
+@router.get('/tournaments/all_vs_all', response_class=HTMLResponse)
+async def tournaments_all_vs_all(request: Request):
+    return templates.TemplateResponse(request=request, name='classes/tournaments/all_vs_all.html')

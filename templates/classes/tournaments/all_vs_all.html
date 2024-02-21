@@ -1,0 +1,12 @@
+{% extends 'classes/tournaments/tournaments_base.html' %}
+{% block head2 %}
+<script src="{{ url_for('static', path='js/all_vs_all.js') }}" defer></script>
+{% endblock %}
+
+{% block body2 %}
+    <input class="slider" type="range" oninput="sizePic()" id="size" 
+    min="2" max="9">
+    <div class="cells_holder" id="schema_box">
+        
+    </div>
+{% endblock %}
