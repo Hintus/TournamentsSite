@@ -535,30 +535,27 @@ a{
 } */
 
 .all_vs_all_header{
-    background-color: #2AA5A0;
-    background-image: linear-gradient(0deg, white ,var(--my_orange));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
     font-family: 'Inter', sans-serif;
     font-size: 30px;
+    margin-left: 380px;
 }
 
 .tournaments_schema{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: auto;
     border-radius: 20px;
-    border: 1px solid #ff5500;
+    /* border: 1px solid #ff5500; */
 }
 
 .slider {
-    opacity: 0.1;
     -webkit-appearance: none;
-    width: 30%;
+    width: 80px;
     height: 10px;
     border-radius: 5px;  
     background: #292929;
     outline: none;
-    opacity: 0.7;
+    opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
@@ -569,7 +566,7 @@ a{
     width: 20px;
     height: 20px;
     border-radius: 50%; 
-    background: #702601;
+    background: #ff5500;
     cursor: pointer;
 }
 
@@ -580,7 +577,29 @@ a{
     background: #4CAF50;
     cursor: pointer;
 }
+
+.int_slider{
+    background-color: inherit;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border: none;
+    margin: none;
+}
+
+.slider_holder{
+    margin-top: -50px;
+    margin-left: 50px;
+    padding: none;
+    width: 112px;
+    border: 1px solid #ff5500;
+    border-radius: 5px;
+    padding-bottom: 4px;
+}
+
 .cells_holder{
+    margin:10px;
     width: 200px;
     height: 200px;
     flex-direction: row;
@@ -590,15 +609,49 @@ a{
 .cells{
     display:inline-block;
     border: 1px solid #ff5500;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-top: -5px;
+}
+
+.cells:hover{
+    background-color: var(--hover_orange);
 }
 
 .cells_blocked{
     display:inline-block;
-    border: 1px solid #792800;
-    width: 25px;
-    height: 25px;
+    border: 1px solid #ff5500;
+    width: 30px;
+    height: 30px;
     margin-top: -5px;
+    background-color: #1a1a1a;
+}
+
+.turnament_step_num{
+    background-color: #2AA5A0;
+    background-image: linear-gradient(0deg, white ,var(--my_orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+}
+
+.turnament_step_text{
+    color: white;
+    font-size: 18px;
+    margin-top: 72px;
+}
+
+.turnament_step2_text{
+    margin-top: 63px;
+
+}
+
+.tournamnets_create_main{
+    display: flex;
+}
+
+.game_ico{
+    width: 50px;
+    height: 50px;
 }

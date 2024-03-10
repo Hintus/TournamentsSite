@@ -1,7 +1,16 @@
 from datetime import datetime
 
 from sqlalchemy import MetaData, Table, Column, Integer, String, TIMESTAMP, ForeignKey, JSON, Boolean
+import enum
+from tkinter import CASCADE
 
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import mapped_column, Mapped
+from sqlalchemy.sql.annotation import Annotated
+
+# from auth.database import Base
+
+intpk = Annotated[int, mapped_column(primary_key=True)]
 metadata = MetaData()
 
 role = Table(

@@ -4,9 +4,43 @@
 {% endblock %}
 
 {% block body2 %}
-    <input class="slider" type="range" oninput="sizePic()" id="size" 
-    min="2" max="9">
-    <div class="cells_holder" id="schema_box">
-        
+<div class="tournamnets_create_main">
+    <div>
+        <div style="display: flex;">
+            <p class=turnament_step_num>1.</p>
+            <p class="turnament_step_text">Выберите число игроков</p>
+        </div>
+        <div class="slider_holder">
+            <input class="slider" type="range" oninput="sizePic()" id="size" 
+            min="3" max="8">
+            <input class="int_slider" type="text" readonly id="int_slider">
+        </div>
+            <div class="cells_holder" id="schema_box">
+            </div>
     </div>
+    <div>
+        <div style="display: flex;">
+            <p class=turnament_step_num>2.</p>
+            <p class="turnament_step_text turnament_step2_text">Выберите игру <br> для турнира</p>
+            <div class="game_icos">
+                <img src="{{url_for('static',path='images/game_icos/Dota.png')}}" alt="" class="game_ico">
+                <img src="{{url_for('static',path='images/game_icos/CsGo.png')}}" alt="" class="game_ico">
+                <img src="" alt="" class="game_ico">
+                <img src="" alt="" class="game_ico">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="display: flex;">
+            <p class=turnament_step_num>3.</p>
+            <p class="turnament_step_text">Выберите число игроков</p>
+        </div>
+    </div>
+    <div>
+        <div style="display: flex;">
+            <p class=turnament_step_num>4.</p>
+            <p class="turnament_step_text">Выберите число игроков</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

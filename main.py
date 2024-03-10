@@ -3,13 +3,13 @@ from fastapi_users import FastAPIUsers
 from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
 
-from auth.auth import auth_backend
-from auth.database import User
-from auth.manager import get_user_manager
-from auth.schemas import UserRead, UserCreate
-from pages.router import router as router_pages
-from auth.router import router as router_login
-from classes.router import router as router_classes
+from src.auth.auth import auth_backend
+from src.auth.database import User
+from src.auth.manager import get_user_manager
+from src.auth.schemas import UserRead, UserCreate
+from src.main.router import router as router_pages
+from src.auth.router import router as router_login
+from src.classes.router import router as router_classes
 
 app = FastAPI()
 
@@ -39,3 +39,4 @@ app.include_router(
     tags=["auth"],
 )
 
+# SyncOrm.create_tables()
