@@ -38,5 +38,3 @@ app.include_router(
     prefix="/auth",
     tags=["auth"],
 )
-
-# SyncOrm.create_tables()

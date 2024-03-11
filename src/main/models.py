@@ -10,7 +10,7 @@ from sqlalchemy.sql.annotation import Annotated
 
 # from auth.database import Base
 
-intpk = Annotated[int, mapped_column(primary_key=True)]
+# intpk = Annotated[int, mapped_column(primary_key=True)]
 metadata = MetaData()
 
 role = Table(
