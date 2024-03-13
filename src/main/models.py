@@ -21,7 +21,7 @@ role = Table(
     Column("permissions", JSON),
 )
 
-user = Table(
+user = Table(  # императивный вид объявления моделей
     "user",
     metadata,
     Column("id", Integer, primary_key=True),
