@@ -38,7 +38,7 @@ async def tournaments_all_vs_all(request: Request):
 
 
 @router.get('/')
-async def get_all_tournaments(id: int, session: AsyncSession = Depends(get_async_session)):
+async def get_one_tournament(id: int, session: AsyncSession = Depends(get_async_session)):
     query = select(Tournament).where(Tournament.c.id == id)
     result = await session.execute(query)
     return result.all()
@@ -52,7 +52,7 @@ async def add_game(new_game: GameCreate, session: AsyncSession = Depends(get_asy
     return {"status": "success"}
 
 
-@router.post('')
-async def add_tournament(tour: Annotated[STournamentAdd, Depends()]):
+@router.post('/add_tour')
+async def add_tournament(tour: Annotated[STournamentAdd, Depends()]) -> int:
     tournament_id = await TournamentRepository.add_one(tour)
-    return {"ok": True, "tournament_id": tournament_id}
+    return tournament_id
