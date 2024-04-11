@@ -445,6 +445,10 @@ a{
     outline: none;
 }
 
+.email_input_register{
+    width: 165px;
+}
+
 .reg_input_repeat{
     width: 99px;
 }

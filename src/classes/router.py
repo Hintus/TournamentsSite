@@ -6,7 +6,7 @@ from starlette.responses import HTMLResponse
 from starlette.templating import Jinja2Templates
 from src.auth.database import get_async_session
 from src.classes.models import *
-from src.classes.repository import TournamentRepository
+# from src.classes.repository import TournamentRepository
 from src.classes.schemas import GameCreate, STournamentAdd
 
 router = APIRouter(
@@ -52,7 +52,7 @@ async def add_game(new_game: GameCreate, session: AsyncSession = Depends(get_asy
     return {"status": "success"}
 
 
-@router.post('/add_tour')
-async def add_tournament(tour: Annotated[STournamentAdd, Depends()]) -> int:
-    tournament_id = await TournamentRepository.add_one(tour)
-    return tournament_id
+# @router.post('/add_tour')
+# async def add_tournament(tour: Annotated[STournamentAdd, Depends()]) -> int:
+#     tournament_id = await TournamentRepository.add_one(tour)
+#     return tournament_id
