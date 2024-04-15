@@ -18,11 +18,6 @@ async def main(request: Request):
     return templates.TemplateResponse(request=request, name='main.html')
 
 
-@router.get('/to_start', response_class=HTMLResponse)
-async def main(request: Request):
-    return templates.TemplateResponse(request=request, name='main.html')
-
-
 @router.get('/schemas', response_class=HTMLResponse)
 async def schemas(request: Request):
     return templates.TemplateResponse(request=request, name='schemas_main.html')
