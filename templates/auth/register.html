@@ -12,37 +12,14 @@
         <input class="login_input_login" type="text" name="username" id="username">
     </div>    
     <div class="login_input_text"> Ваш <span class="orange_text">email:</span>
-        <input class="login_input_register email_input_register" name="password" id="password">
+        <input class="login_input_register email_input_register" name="email" id="email">
     </div>
     <div class="login_input_text"> Ваш <span class="orange_text">пароль:</span>
-        <input class="login_input_register" type="password" name="email" id="email">
+        <input class="login_input_register" type="password" name="password" id="password">
     </div>
+    <input style="visibility: hidden; position: absolute;" value="1" name="role_id" id="role_id" >
     <p class="reg_help_text">Если у вас уже есть аккаунт вы можете в него <a class="reg_help_href" href="{{ url_for('login') }}">Войти</a></p>
     <input class="input_submit reg_supmit" type="submit" value="Завершить">
+<!--    <button class="input_submit reg_supmit" onclick="submitForm()">Завершить</button>-->
 </form>
 {% endblock %}
-
-<!--<form action="/submit-form" method="post">-->
-<!--    <label for="username">Username:</label><br>-->
-<!--    <input type="text" id="username" name="username"><br><br>-->
-<!--    -->
-<!--    <label for="email">Email:</label><br>-->
-<!--    <input type="email" id="email" name="email"><br><br>-->
-<!--    -->
-<!--    <label for="password">Password:</label><br>-->
-<!--    <input type="password" id="password" name="password"><br><br>-->
-<!--    -->
-<!--    <label for="role_id">Role ID:</label><br>-->
-<!--    <input type="number" id="role_id" name="role_id"><br><br>-->
-<!--    -->
-<!--    <label for="is_active">Is Active:</label><br>-->
-<!--    <input type="checkbox" id="is_active" name="is_active" checked><br><br>-->
-<!--    -->
-<!--    <label for="is_superuser">Is Superuser:</label><br>-->
-<!--    <input type="checkbox" id="is_superuser" name="is_superuser"><br><br>-->
-<!--    -->
-<!--    <label for="is_verified">Is Verified:</label><br>-->
-<!--    <input type="checkbox" id="is_verified" name="is_verified"><br><br>-->
-<!--    -->
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->

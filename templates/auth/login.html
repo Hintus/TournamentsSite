@@ -7,12 +7,12 @@
 
 {% block form %}
 <div class="login_header"> Войдите в аккаунт </div>
-<form method="post" action="/auth">
-    <div class="login_input_text"> Ваш <span class="orange_text">логин:</span>
-        <input class="login_input_login" type="text" name="username">
+<form method="post" action="/auth/jwt/login" id="registration-form">
+    <div class="login_input_text"> Ваша <span class="orange_text">почта:</span>
+        <input class="login_input_login" type="text" name="email" id="email">
     </div>
     <div class="login_input_text"> Ваш <span class="orange_text">пароль:</span>
-        <input class="login_input_register" type="password" name="password">
+        <input class="login_input_register" type="password" name="password" id="password">
     </div>
     <p class="reg_help_text">Если у вас нет аккаунта вы можете его <a class="reg_help_href" href="{{ url_for('register') }}">Создать</a></p>
     <input class="input_submit" type="submit" value="Войти">

@@ -2,8 +2,10 @@ from typing import Optional
 
 from fastapi import Depends, Request
 from fastapi_users import BaseUserManager, IntegerIDMixin, exceptions, models, schemas
+from starlette.responses import RedirectResponse
 
 from src.auth.database import get_user_db, User
+from src.main.router import main
 
 # from .auth import User, get_user_db
 
@@ -15,7 +17,8 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     verification_token_secret = SECRET
 
     async def on_after_register(self, user: User, request: Optional[Request] = None):
-        print(f"User {user.id} has registered.")
+        print(f"User {user.username} has registered.")
+        return RedirectResponse(url='http://127.0.0.1:8000/pages')
 
     async def create(
             self,

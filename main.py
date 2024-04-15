@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi_users import FastAPIUsers
 from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
@@ -7,9 +7,9 @@ from src.auth.auth import auth_backend
 from src.auth.database import User
 from src.auth.manager import get_user_manager
 from src.auth.schemas import UserRead, UserCreate
-from src.main.router import router as router_pages
 from src.auth.router import router as router_login
 from src.classes.router import router as router_classes
+from src.main.router import router as router_pages
 
 app = FastAPI()
 
@@ -17,7 +17,6 @@ fastapi_users = FastAPIUsers[User, int](
     get_user_manager,
     [auth_backend],
 )
-
 
 app.include_router(router_pages)
 app.include_router(router_login)
@@ -38,3 +37,10 @@ app.include_router(
     prefix="/auth",
     tags=["auth"],
 )
+
+current_user = fastapi_users.current_user()
+
+
+@app.get("/protected-route")
+def protected_route(user: User = Depends(current_user)):
+    return f"Hello, {user.username}"

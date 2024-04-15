@@ -1,4 +1,4 @@
-document.getElementsByClassName("table_stroke").onclick = myFunction;
+// document.getElementsByClassName("table_stroke").onclick = myFunction;
 
 function myFunction(div) {
   if (div.style.height=='200px'){

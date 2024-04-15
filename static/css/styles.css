@@ -434,6 +434,7 @@ a{
     border-bottom: 2px solid var(--my_orange);
     color: white;
     outline: none;
+    width: 153px;
 }
 
 .login_input_register{
